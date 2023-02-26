@@ -20,10 +20,15 @@
        
          <input type="hidden" id="prod_id" name="prod_id">
   
-
-             <div class="mb-3">
-                 <label for="prod_nom" class="col-form-label">Nombre</label>
-                 <input type="text" class="form-control" id="prod_nom" name="prod_nom">
+             <div class="form-group">
+               <label for="prod_nom">Nombre</label>
+               <input type="text" class="form-control" id="prod_nom" name="prod_nom" placeholder="nombre" required>
+             </div>
+             
+              
+             <div class="form-group">
+               <label for="prod_desc">Descripcion</label>
+               <textarea type="text"  class="form-control" id="prod_desc" name="prod_desc" rows="3" placeholder="ingresar descripcion" required ></textarea>
              </div>
         
       </div>

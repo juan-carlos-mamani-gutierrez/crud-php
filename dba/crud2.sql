@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-02-2023 a las 23:25:32
+-- Tiempo de generación: 26-02-2023 a las 04:09:48
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tm_producto` (
   `prod_id` int(11) NOT NULL,
   `prod_nom` varchar(150) NOT NULL,
+  `prod_desc` varchar(500) NOT NULL,
   `fech_crea` datetime NOT NULL,
   `fech_modi` datetime DEFAULT NULL,
   `fech_elim` datetime DEFAULT NULL,
@@ -40,10 +41,12 @@ CREATE TABLE `tm_producto` (
 -- Volcado de datos para la tabla `tm_producto`
 --
 
-INSERT INTO `tm_producto` (`prod_id`, `prod_nom`, `fech_crea`, `fech_modi`, `fech_elim`, `est`) VALUES
-(1, 'audifonos', '2023-02-25 22:54:33', '2023-02-25 17:57:00', NULL, 1),
-(2, 'mous', '2023-02-25 17:57:07', NULL, '2023-02-25 18:25:05', 0),
-(3, 'techado', '2023-02-25 18:25:01', NULL, NULL, 1);
+INSERT INTO `tm_producto` (`prod_id`, `prod_nom`, `prod_desc`, `fech_crea`, `fech_modi`, `fech_elim`, `est`) VALUES
+(1, 'audifonos', 'dcd', '2023-02-25 22:54:33', '2023-02-25 22:13:03', NULL, 1),
+(2, 'mous', 'raton\r\npara moverse en la pantalla\r\n', '2023-02-25 17:57:07', '2023-02-25 23:08:27', '2023-02-25 18:25:05', 1),
+(3, 'techado', 'para techear\r\nen la pc\r\n', '2023-02-25 18:25:01', '2023-02-25 22:46:26', '2023-02-25 20:50:02', 1),
+(4, 'cd', 'dvd', '2023-02-25 20:38:30', '2023-02-25 20:45:52', NULL, 1),
+(5, 'hdmi', 'para el monitor ', '2023-02-25 22:47:03', NULL, NULL, 1);
 
 --
 -- Índices para tablas volcadas
@@ -63,7 +66,7 @@ ALTER TABLE `tm_producto`
 -- AUTO_INCREMENT de la tabla `tm_producto`
 --
 ALTER TABLE `tm_producto`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
